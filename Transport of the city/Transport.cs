@@ -19,9 +19,25 @@ namespace Transport_of_the_city
             Fare = fare;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Transport other = (Transport)obj;
+            return Capacity == other.Capacity;
+        }
+
+        public override int GetHashCode()
+        {
+            return Capacity.GetHashCode();
+        }
+
         public static bool operator ==(Transport t1, Transport t2)
         {
-            return t1.Capacity == t2.Capacity;
+            return t1.Equals(t2);
         }
 
         public static bool operator !=(Transport t1, Transport t2)
