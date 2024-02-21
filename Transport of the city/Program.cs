@@ -9,11 +9,11 @@
 
             if (trolleybus1 == trolleybus2)
             {
-                Console.WriteLine("Trolleybuses have the same capacity");
+                Console.WriteLine("Троллейбусы имеют одинаковую вместимость");
             }
             else if (trolleybus1 < trolleybus2)
             {
-                Console.WriteLine("Trolleybus1 has less capacity than Trolleybus2");
+                Console.WriteLine("первый троллейбус имеет меньшую вместимость, чем второй троллейбус");
             }
 
             Transport bus = new Bus("Bus");
@@ -21,7 +21,7 @@
 
             if (bus > ferry)
             {
-                Console.WriteLine("Bus has greater capacity than Ferry");
+                Console.WriteLine("Автобус имеет большую вместимость, чем Паром");
             }
         }
     }
